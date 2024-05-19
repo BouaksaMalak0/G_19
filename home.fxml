@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="923.0" prefWidth="1633.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.menuPatientsController">
+   <children>
+      <AnchorPane layoutX="-4.0" prefHeight="917.0" prefWidth="1637.0" style="-fx-background-color: #0d2853; -fx-border-color: #0c264f;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1500.0" visible="false">
+               <children>
+                  <AnchorPane fx:id="loginPane" layoutX="-6.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1516.0" style="-fx-background-color: FFFFFF;" visible="false">
+                     <children>
+                        <TextField fx:id="login_showPassword" layoutX="876.0" layoutY="546.0" prefHeight="42.0" prefWidth="476.0" style="-fx-background-radius: 50;" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c264f" height="906.0" layoutX="-40.0" stroke="BLACK" strokeType="INSIDE" width="740.0" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="-40.0" AnchorPane.topAnchor="0.0" />
+                        <Circle fill="#0c264f" layoutX="402.0" layoutY="475.0" radius="219.0" stroke="#eaa79c" strokeType="INSIDE" strokeWidth="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c264f" height="87.0" layoutX="122.0" layoutY="399.0" stroke="#0c264f" strokeType="INSIDE" width="383.0" />
+                        <Text fill="WHITE" layoutX="74.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DermaGlow Clinic">
+                           <font>
+                              <Font name="Bell MT" size="58.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="74.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unlock Radiance, Embrace Confidence!">
+                           <font>
+                              <Font name="Bell MT" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="876.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG IN">
+                           <font>
+                              <Font name="Bell MT" size="79.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="login_loginBtn" layoutX="1045.0" layoutY="665.0" mnemonicParsing="false" onAction="#enterButtonClicked" prefHeight="58.0" prefWidth="136.0" style="-fx-background-radius: 50; -fx-background-color: #0c264f;" text="Enter" textFill="WHITE">
+                           <font>
+                              <Font name="Bell MT" size="27.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="884.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+                           <font>
+                              <Font name="Bell MT" size="28.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="887.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                           <font>
+                              <Font name="Bell MT" size="28.0" />
+                           </font>
+                        </Text>
+                        <PasswordField fx:id="pwd_field" layoutX="876.0" layoutY="546.0" onAction="#enterPwd" prefHeight="42.0" prefWidth="476.0" style="-fx-background-radius: 50;" />
+                        <TextField fx:id="username_field" layoutX="876.0" layoutY="438.0" onAction="#enterUsername" prefHeight="42.0" prefWidth="476.0" style="-fx-background-radius: 50;" />
+                        <Group layoutX="1204.0" layoutY="619.0">
+                           <children>
+                              <Text layoutY="3.9716796875" strokeType="OUTSIDE" strokeWidth="0.0" text="New user?">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Text>
+                              <Hyperlink fx:id="registernow_hyper" layoutX="59.0" layoutY="-14.0" text="Register now">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Hyperlink>
+                           </children>
+                        </Group>
+                        <CheckBox fx:id="login_checkBox" layoutX="887.0" layoutY="608.0" mnemonicParsing="false" text="Show password">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="registerPane" layoutX="14.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1500.0" style="-fx-background-color: FFFFFF;">
+                     <children>
+                        <TextField fx:id="username_field11" layoutX="875.0" layoutY="432.0" onAction="#enterUsername" prefHeight="42.0" prefWidth="476.0" style="-fx-background-radius: 50;" />
+                        <TextField fx:id="register_showPassword" layoutX="875.0" layoutY="548.0" prefHeight="42.0" prefWidth="476.0" style="-fx-background-radius: 50;" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c264f" height="906.0" layoutX="-28.8" stroke="BLACK" strokeType="INSIDE" width="729.0" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="-29.0" AnchorPane.topAnchor="0.0" />
+                        <Circle fill="#0c264f" layoutX="402.0" layoutY="475.0" radius="219.0" stroke="#eaa79c" strokeType="INSIDE" strokeWidth="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c264f" height="87.0" layoutX="122.0" layoutY="399.0" stroke="#0c264f" strokeType="INSIDE" width="383.0" />
+                        <Text fill="WHITE" layoutX="74.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DermaGlow Clinic">
+                           <font>
+                              <Font name="Bell MT" size="58.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="74.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unlock Radiance, Embrace Confidence!">
+                           <font>
+                              <Font name="Bell MT" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="876.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTER">
+                           <font>
+                              <Font name="Bell MT" size="79.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="register_button" layoutX="1045.0" layoutY="665.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="136.0" style="-fx-background-radius: 50; -fx-background-color: #0c264f;" text="Register" textFill="WHITE">
+                           <font>
+                              <Font name="Bell MT" size="27.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="876.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New username">
+                           <font>
+                              <Font name="Bell MT" size="28.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="879.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin's password">
+                           <font>
+                              <Font name="Bell MT" size="28.0" />
+                           </font>
+                        </Text>
+                        <PasswordField fx:id="adminPwd_field" layoutX="875.0" layoutY="432.0" onAction="#enterPwd" prefHeight="42.0" prefWidth="476.0" style="-fx-background-radius: 50;" />
+                        <TextField fx:id="username_field1" layoutX="876.0" layoutY="305.0" onAction="#enterUsername" prefHeight="42.0" prefWidth="476.0" style="-fx-background-radius: 50;" />
+                        <PasswordField fx:id="pwd_field1" layoutX="875.0" layoutY="548.0" onAction="#enterPwd" prefHeight="42.0" prefWidth="476.0" style="-fx-background-radius: 50;" />
+                        <Text layoutX="879.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New password">
+                           <font>
+                              <Font name="Bell MT" size="28.0" />
+                           </font>
+                        </Text>
+                        <CheckBox fx:id="register_checkBox" layoutX="879.0" layoutY="603.0" mnemonicParsing="false" text="Show password">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <Group layoutX="1181.0" layoutY="614.0">
+                           <children>
+                              <Text layoutY="3.9716796875" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account ?" wrappingWidth="219.4110107421875">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Text>
+                              <Hyperlink fx:id="loginhere_hyper" layoutX="148.0" layoutY="-14.0" onAction="#SwitchForm" text="Login here">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Hyperlink>
+                           </children>
+                        </Group>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d2853" height="107.0" layoutX="195.0" layoutY="8.0" stroke="#0d2853" strokeType="INSIDE" style="-fx-rotate: 45;" width="151.0" />
+            <Button fx:id="Agenda_button1" layoutX="1306.0" layoutY="25.0" mnemonicParsing="false" onAction="#click_agenda" prefHeight="40.0" prefWidth="226.0" style="-fx-background-color: FFFFFF; -fx-border-color: #0c264f; -fx-border-radius: 5; -fx-background-radius: 5;" text="Log out" textFill="#0c264f">
+               <font>
+                  <Font name="Bell MT" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="Agenda_button21" layoutX="374.0" layoutY="26.0" mnemonicParsing="false" onAction="#click_agenda" prefHeight="40.0" prefWidth="106.0" style="-fx-border-radius: 5; -fx-background-color: #0c264f;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="Agenda_button22" layoutX="501.0" layoutY="26.0" mnemonicParsing="false" onAction="#click_agenda" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #0c264f; -fx-border-radius: 5;" text="Patients" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="Agenda_button23" layoutX="637.0" layoutY="25.0" mnemonicParsing="false" onAction="#click_agenda" prefHeight="41.0" prefWidth="169.0" style="-fx-background-color: #0c264f; -fx-border-radius: 5;" text="Appointements" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="Agenda_button24" layoutX="837.0" layoutY="25.0" mnemonicParsing="false" onAction="#click_agenda" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #0c264f; -fx-border-radius: 5;" text="Agenda" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="Agenda_button241" layoutX="1007.0" layoutY="26.0" mnemonicParsing="false" onAction="#click_agenda" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #0c264f; -fx-border-radius: 5;" text="Settings" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="22.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="-5.0" layoutY="92.0" prefHeight="770.0" prefWidth="1594.0" style="-fx-background-color: FFFFFF;" visible="false">
+               <children>
+                  <TableView fx:id="patients_list" layoutX="56.0" layoutY="132.0" onSort="#patient_list" prefHeight="563.0" prefWidth="1063.0" style="-fx-background-color: fefaf6; -fx-background-radius: 10;">
+                     <columns>
+                        <TableColumn prefWidth="180.800048828125" style="-fx-background-color: #99b5cf;" text="ID" />
+                        <TableColumn minWidth="0.0" prefWidth="244.0" style="-fx-background-color: #99b5cf;" text="Name" />
+                        <TableColumn prefWidth="88.0" style="-fx-background-color: #99b5cf;" text="Age" />
+                        <TableColumn prefWidth="184.79998779296875" style="-fx-background-color: #99b5cf;" text="Phone Number" />
+                        <TableColumn prefWidth="166.4000244140625" style="-fx-background-color: #99b5cf;" text="Last Appointement" />
+                        <TableColumn prefWidth="211.9999755859376" style="-fx-background-color: #99b5cf;" text="Email" />
+                     </columns>
+                  </TableView>
+                  <Text layoutX="56.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patients List ">
+                     <font>
+                        <Font name="Bell MT" size="54.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="Add_patient_button" layoutX="1119.0" layoutY="45.0" minWidth="48.0" mnemonicParsing="false" onAction="#add_patient" prefHeight="52.0" prefWidth="54.0" style="-fx-background-radius: 90; -fx-background-color: #114a6c;" />
+                  <Line endX="-100.0" endY="26.399978637695312" layoutX="1246.0" layoutY="55.0" startX="-100.0" startY="8.199981689453125" stroke="WHITE" strokeWidth="4.0" />
+                  <Line endX="96.0" layoutX="1059.0" layoutY="72.0" startX="77.800048828125" stroke="WHITE" strokeWidth="4.0" />
+                  <Group />
+                  <AnchorPane layoutX="1157.0" layoutY="97.0" prefHeight="563.0" prefWidth="366.0" style="-fx-border-color: #0c264f; -fx-background-radius: 20; -fx-background-color: #99b5cf; -fx-border-radius: 20;">
+                     <children>
+                        <Text fill="#0c264f" layoutX="53.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add new patient ">
+                           <font>
+                              <Font name="Bell MT Bold" size="27.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="53.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First name">
+                           <font>
+                              <Font name="Bell MT" size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="47.0" layoutY="96.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                        <Text layoutX="55.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last name">
+                           <font>
+                              <Font name="Bell MT" size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="47.0" layoutY="172.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                        <Text layoutX="55.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress">
+                           <font>
+                              <Font name="Bell MT" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="55.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of birth">
+                           <font>
+                              <Font name="Bell MT" size="20.0" />
+                           </font>
+                        </Text>
+                        <DatePicker layoutX="51.0" layoutY="247.0" prefHeight="26.0" prefWidth="272.0" style="-fx-background-color: FFFFFF; -fx-border-radius: 20;" />
+                        <TextField layoutX="47.0" layoutY="312.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                        <Text layoutX="55.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+                           <font>
+                              <Font name="Bell MT" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="53.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number">
+                           <font>
+                              <Font name="Bell MT" size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="55.0" layoutY="463.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                        <TextField layoutX="51.0" layoutY="389.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                        <Button layoutX="134.0" layoutY="513.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #0c264f; -fx-border-radius: 20; -fx-background-radius: 20;" text="Add" textFill="WHITE">
+                           <font>
+                              <Font name="Bell MT" size="22.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="109.0" layoutY="123.0" prefHeight="798.0" prefWidth="1526.0" style="-fx-background-color: FFFFFF;" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="352.0" layoutX="-106.0" layoutY="445.0" stroke="WHITE" strokeType="INSIDE" width="1628.0" />
+                  <ImageView fitHeight="721.0" fitWidth="1344.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Pictures/Screenshots/Screenshot%20(342).png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d2853" height="453.0" layoutX="1387.0" layoutY="-8.0" stroke="#0d2853" strokeType="INSIDE" width="139.0" />
+               </children>
+            </AnchorPane>
+            <Text fill="WHITE" layoutX="16.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DermaGlow">
+               <font>
+                  <Font name="Bell MT" size="43.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="16.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unlock radiance , Embrace confidence">
+               <font>
+                  <Font name="Bell MT" size="12.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="-7.0" layoutY="91.0" prefHeight="833.0" prefWidth="1658.0" style="-fx-background-color: FFFFFF;" visible="false">
+               <children>
+                  <TableView fx:id="patients_list1" layoutX="37.0" layoutY="151.0" onSort="#patient_list" prefHeight="563.0" prefWidth="1063.0" style="-fx-background-color: fefaf6; -fx-background-radius: 10;">
+                     <columns>
+                        <TableColumn prefWidth="180.800048828125" style="-fx-background-color: #99b5cf;" text="ID" />
+                        <TableColumn minWidth="0.0" prefWidth="244.0" style="-fx-background-color: #99b5cf;" text="Name" />
+                        <TableColumn prefWidth="88.0" style="-fx-background-color: #99b5cf;" text="Age" />
+                        <TableColumn prefWidth="184.79998779296875" style="-fx-background-color: #99b5cf;" text="Phone Number" />
+                        <TableColumn prefWidth="166.4000244140625" style="-fx-background-color: #99b5cf;" text="Last Appointement" />
+                        <TableColumn prefWidth="211.9999755859376" style="-fx-background-color: #99b5cf;" text="Email" />
+                     </columns>
+                  </TableView>
+                  <Text layoutX="37.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patients List ">
+                     <font>
+                        <Font name="Bell MT" size="54.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="1178.0" layoutY="108.0" prefHeight="563.0" prefWidth="366.0" style="-fx-border-color: #0c264f; -fx-background-radius: 20; -fx-background-color: #99b5cf; -fx-border-radius: 20;">
+                     <children>
+                        <Text fill="#0c264f" layoutX="53.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add new patient ">
+                           <font>
+                              <Font name="Bell MT Bold" size="27.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="53.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First name">
+                           <font>
+                              <Font name="Bell MT" size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="47.0" layoutY="98.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                        <Text layoutX="55.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last name">
+                           <font>
+                              <Font name="Bell MT" size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="47.0" layoutY="172.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                        <Text layoutX="55.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress">
+                           <font>
+                              <Font name="Bell MT" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="55.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of birth">
+                           <font>
+                              <Font name="Bell MT" size="20.0" />
+                           </font>
+                        </Text>
+                        <DatePicker layoutX="51.0" layoutY="247.0" prefHeight="26.0" prefWidth="272.0" style="-fx-background-color: FFFFFF; -fx-border-radius: 20;" />
+                        <TextField layoutX="47.0" layoutY="312.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                        <Text layoutX="55.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+                           <font>
+                              <Font name="Bell MT" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="53.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number">
+                           <font>
+                              <Font name="Bell MT" size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="55.0" layoutY="463.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                        <TextField layoutX="51.0" layoutY="389.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                        <Button layoutX="134.0" layoutY="513.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #0c264f; -fx-border-radius: 20; -fx-background-radius: 20;" text="Add" textFill="WHITE">
+                           <font>
+                              <Font name="Bell MT" size="22.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="Add_patient_button1" layoutX="1094.0" layoutY="52.0" minWidth="48.0" mnemonicParsing="false" onAction="#add_patient" prefHeight="52.0" prefWidth="54.0" style="-fx-background-radius: 90; -fx-background-color: #114a6c;" />
+                  <Line endX="-100.0" endY="26.399978637695312" layoutX="1219.0" layoutY="60.0" startX="-100.0" startY="8.199981689453125" stroke="WHITE" strokeWidth="4.0" />
+                  <Line endX="96.0" layoutX="1032.0" layoutY="78.0" startX="77.800048828125" stroke="WHITE" strokeWidth="4.0" />
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="12.0" layoutY="83.0" prefHeight="824.0" prefWidth="1542.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="235.0" layoutX="-9.0" layoutY="595.0" stroke="BLACK" strokeType="INSIDE" width="1564.0" />
+            <ImageView fitHeight="638.0" fitWidth="445.0" layoutX="1110.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Downloads/CABINET%20PIC.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="187.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to your space ">
+               <font>
+                  <Font name="Bell MT" size="70.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="345.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dermaglow Clinic">
+               <font>
+                  <Font name="Bell MT" size="49.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="418.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unlock radiance , enbrace confidence ! ">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="488.0" fitWidth="1124.0" layoutX="-14.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Downloads/Screenshot%20(347).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-6.0" layoutY="112.0" prefHeight="770.0" prefWidth="1615.0" style="-fx-background-color: FFFFFF;" visible="false">
+         <children>
+            <Text layoutX="54.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected patient :">
+               <font>
+                  <Font name="Bell MT" size="41.0" />
+               </font>
+            </Text>
+            <Group />
+            <Text layoutX="64.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First name">
+               <font>
+                  <Font name="Bell MT" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="66.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last name">
+               <font>
+                  <Font name="Bell MT" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="66.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress">
+               <font>
+                  <Font name="Bell MT" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="66.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of birth">
+               <font>
+                  <Font name="Bell MT" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="66.0" layoutY="651.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <font>
+                  <Font name="Bell MT" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="64.0" layoutY="576.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number">
+               <font>
+                  <Font name="Bell MT" size="20.0" />
+               </font>
+            </Text>
+            <TextField layoutX="64.0" layoutY="303.0" prefHeight="30.0" prefWidth="284.0" style="-fx-background-radius: 20;" />
+            <TextField layoutX="64.0" layoutY="660.0" prefHeight="30.0" prefWidth="284.0" style="-fx-background-radius: 20;" />
+            <TextField layoutX="64.0" layoutY="589.0" prefHeight="30.0" prefWidth="284.0" style="-fx-background-radius: 20;" />
+            <TextField layoutX="64.0" layoutY="520.0" prefHeight="30.0" prefWidth="284.0" style="-fx-background-radius: 20;" />
+            <TextField layoutX="64.0" layoutY="449.0" prefHeight="30.0" prefWidth="284.0" style="-fx-background-radius: 20;" />
+            <TextField layoutX="64.0" layoutY="381.0" prefHeight="30.0" prefWidth="284.0" style="-fx-background-radius: 20;" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="64.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Downloads/2c8634cdf58d48c5fe30b897a458d0e7.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="524.0" layoutY="57.0" prefHeight="430.0" prefWidth="574.0" style="-fx-border-radius: 20;">
+               <children>
+                  <Text layoutX="14.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Past medical records :">
+                     <font>
+                        <Font name="Bell MT" size="23.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Familly history :">
+                     <font>
+                        <Font name="Bell MT" size="23.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Social history :">
+                     <font>
+                        <Font name="Bell MT" size="23.0" />
+                     </font>
+                  </Text>
+                  <TextArea layoutX="16.0" layoutY="28.0" prefHeight="98.0" prefWidth="542.0" />
+                  <TextArea layoutX="14.0" layoutY="310.0" prefHeight="98.0" prefWidth="542.0" />
+                  <TextArea layoutX="14.0" layoutY="177.0" prefHeight="98.0" prefWidth="542.0" />
+               </children>
+            </AnchorPane>
+            <Text layoutX="537.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medical history :">
+               <font>
+                  <Font name="Bell MT" size="28.0" />
+               </font>
+            </Text>
+            <Text layoutX="537.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medication records :">
+               <font>
+                  <Font name="Bell MT" size="28.0" />
+               </font>
+            </Text>
+            <Text layoutX="542.0" layoutY="562.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current medications :">
+               <font>
+                  <Font name="Bell MT" size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="542.0" layoutY="666.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Allergies and Adverse reactions :">
+               <font>
+                  <Font name="Bell MT" size="23.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="1098.0" layoutY="1.0" prefHeight="563.0" prefWidth="366.0" style="-fx-background-radius: 20; -fx-border-radius: 20;">
+               <children>
+                  <Text layoutX="53.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight">
+                     <font>
+                        <Font name="Bell MT" size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="47.0" layoutY="96.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                  <Text layoutX="55.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height">
+                     <font>
+                        <Font name="Bell MT" size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="47.0" layoutY="172.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                  <Text layoutX="55.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blood pressure">
+                     <font>
+                        <Font name="Bell MT" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="55.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Body Mass Index">
+                     <font>
+                        <Font name="Bell MT" size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="47.0" layoutY="312.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                  <Text layoutX="55.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Respiratory rate">
+                     <font>
+                        <Font name="Bell MT" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="53.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart rate">
+                     <font>
+                        <Font name="Bell MT" size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="55.0" layoutY="463.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                  <TextField layoutX="51.0" layoutY="389.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                  <TextField layoutX="53.0" layoutY="457.0" prefHeight="41.0" prefWidth="120.0" style="-fx-background-radius: 20;" />
+                  <TextField layoutX="53.0" layoutY="380.0" prefHeight="41.0" prefWidth="120.0" style="-fx-background-radius: 20;" />
+                  <TextField layoutX="51.0" layoutY="312.0" prefHeight="41.0" prefWidth="120.0" style="-fx-background-radius: 20;" />
+                  <TextField layoutX="51.0" layoutY="240.0" prefHeight="41.0" prefWidth="120.0" style="-fx-background-radius: 20;" />
+                  <TextField layoutX="49.0" layoutY="166.0" prefHeight="41.0" prefWidth="120.0" style="-fx-background-radius: 20;" />
+                  <TextField layoutX="51.0" layoutY="90.0" prefHeight="41.0" prefWidth="120.0" style="-fx-background-radius: 20;" />
+                  <Text layoutX="51.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vital signs :">
+                     <font>
+                        <Font name="Bell MT" size="28.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="274.0" layoutY="23.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="106.0" style="-fx-background-color: #0c264f; -fx-border-radius: 20; -fx-background-radius: 20;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Text layoutX="1152.0" layoutY="568.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnostic records :">
+               <font>
+                  <Font name="Bell MT" size="28.0" />
+               </font>
+            </Text>
+            <TextArea layoutX="542.0" layoutY="574.0" prefHeight="60.0" prefWidth="542.0" />
+            <TextArea layoutX="540.0" layoutY="675.0" prefHeight="60.0" prefWidth="542.0" />
+            <TextArea layoutX="1149.0" layoutY="585.0" prefHeight="150.0" prefWidth="327.0" promptText="+  Load Lab results / specialist Reports">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextArea>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="5.0" layoutY="102.0" prefHeight="770.0" prefWidth="1594.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <TableView fx:id="patients_list2" layoutX="56.0" layoutY="132.0" onSort="#patient_list" prefHeight="563.0" prefWidth="866.0" style="-fx-background-color: fefaf6; -fx-background-radius: 10;">
+               <columns>
+                  <TableColumn prefWidth="180.800048828125" style="-fx-background-color: #99b5cf;" text="Appointement ID" />
+                  <TableColumn minWidth="0.0" prefWidth="244.0" style="-fx-background-color: #99b5cf;" text="Patient Name" />
+                  <TableColumn prefWidth="164.79995727539062" style="-fx-background-color: #99b5cf;" text="Date" />
+                  <TableColumn prefWidth="108.0" style="-fx-background-color: #99b5cf;" text="Time" />
+                  <TableColumn prefWidth="166.4000244140625" style="-fx-background-color: #99b5cf;" text="Status" />
+               </columns>
+            </TableView>
+            <Text layoutX="56.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointements list :">
+               <font>
+                  <Font name="Bell MT" size="54.0" />
+               </font>
+            </Text>
+            <Button fx:id="Add_patient_button2" layoutX="957.0" layoutY="54.0" minWidth="48.0" mnemonicParsing="false" onAction="#add_patient" prefHeight="52.0" prefWidth="54.0" style="-fx-background-radius: 90; -fx-background-color: #114a6c;" />
+            <Line endX="-100.0" endY="26.399978637695312" layoutX="1084.0" layoutY="64.0" startX="-100.0" startY="8.199981689453125" stroke="WHITE" strokeWidth="4.0" />
+            <Line endX="96.0" layoutX="897.0" layoutY="81.0" startX="77.800048828125" stroke="WHITE" strokeWidth="4.0" />
+            <Group />
+            <AnchorPane layoutX="1073.0" layoutY="103.0" prefHeight="371.0" prefWidth="366.0" style="-fx-border-color: #0c264f; -fx-background-radius: 20; -fx-background-color: #99b5cf; -fx-border-radius: 20;">
+               <children>
+                  <Text fill="#0c264f" layoutX="53.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add new appointement  ">
+                     <font>
+                        <Font name="Bell MT Bold" size="27.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="53.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient name">
+                     <font>
+                        <Font name="Bell MT" size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="47.0" layoutY="96.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                  <Text layoutX="55.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time">
+                     <font>
+                        <Font name="Bell MT" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="51.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+                     <font>
+                        <Font name="Bell MT" size="20.0" />
+                     </font>
+                  </Text>
+                  <DatePicker layoutX="47.0" layoutY="171.0" prefHeight="26.0" prefWidth="272.0" style="-fx-background-color: FFFFFF; -fx-border-radius: 20;" />
+                  <TextField layoutX="47.0" layoutY="240.0" prefHeight="30.0" prefWidth="272.0" style="-fx-background-radius: 20; -fx-background-color: FFFFFF;" />
+                  <Button layoutX="134.0" layoutY="296.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #0c264f; -fx-border-radius: 20; -fx-background-radius: 20;" text="Add" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
